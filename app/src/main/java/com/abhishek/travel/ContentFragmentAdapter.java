@@ -11,19 +11,18 @@ import com.abhishek.travel.R;
 
 
 class ContentFragmentAdapter extends FragmentPagerAdapter {
-    private static int NUM_ITEMS = 1;
-    private final Context c;
+    Integer itemCount = 1;
+    Context context;
 
-    public ContentFragmentAdapter(FragmentManager fragmentManager, Context context, int item_count) {
+    public ContentFragmentAdapter(FragmentManager fragmentManager, Context context, int itemCount) {
         super(fragmentManager);
-        NUM_ITEMS = item_count;
-        c = context;
+        this.itemCount=itemCount;
+        this.context =context;
     }
 
-    // Returns total number of pages
     @Override
     public int getCount() {
-        return NUM_ITEMS;
+        return itemCount;
     }
 
     // Returns the fragment to display for that page
@@ -32,25 +31,19 @@ class ContentFragmentAdapter extends FragmentPagerAdapter {
 
         if(position == 0) // if the position is 0 we are returning the First tab
         {
-            ContentFragment2 tab1 = new ContentFragment2();
-            return tab1;
-
+            return new ContentFragment();
         }
         else
         {
-            ContentFragment tab2 = new ContentFragment();
-            return tab2;
-
-
+            return new ContentFragment2();
         }
-
-       // return ContentFragment.newInstance(position);
-    }
+        // return ContentFragment.newInstance(position);
+        }
 
     // Returns the page title for the top indicator
     @Override
     public CharSequence getPageTitle(int position) {
-        return c.getString(R.string.tab) + " " + String.valueOf(position + 1);
+        return context.getString(R.string.tab) + " " + String.valueOf(position + 1);
     }
 
 }

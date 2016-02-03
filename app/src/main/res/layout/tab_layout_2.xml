@@ -36,10 +36,11 @@
 
 
 
-        <TextView
+        <Button
+            android:id="@+id/calculate"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:hint="Amount_recieved"
+            android:text="Calculate"
             android:layout_height="0dp" />
 
 
