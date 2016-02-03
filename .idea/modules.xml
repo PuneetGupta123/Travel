@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MaterialNavigation.iml" filepath="$PROJECT_DIR$/MaterialNavigation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MaterialNavigation-master.iml" filepath="$PROJECT_DIR$/MaterialNavigation-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Travel.iml" filepath="$PROJECT_DIR$/Travel.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
 </project>
-
