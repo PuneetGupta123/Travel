@@ -17,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
 }
 
 
@@ -31,12 +32,13 @@ repositories {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile (name:'kinvey-android-2.10.3', ext:'aar')
+    compile(name: 'kinvey-android-2.10.3', ext: 'aar')
     compile 'com.facebook.android:facebook-android-sdk:4.6.0'
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'com.android.support:cardview-v7:22.2.0'
     compile 'com.android.support:design:22.2.0'
     compile 'com.mcxiaoke.volley:library:1.0.19'
-   // compile 'com.android.support:support-v4:23.+'
+    compile 'com.google.android.gms:play-services:4.0.30'
+    compile 'com.android.support:support-v4:23.+'
 
 }
