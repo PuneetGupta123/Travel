@@ -27,15 +27,18 @@ import com.kinvey.java.User;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+
 public class LoginScreen extends AppCompatActivity {
 
-    Client mKinveyClient;
+    static Client mKinveyClient;
     String appKey="kid_ZkMTx2eVTl",appSecret="0a5312c4b0f2419b97f821317ed8ef7c";
     String TAG="LoginScreen";
     Toolbar toolbar;
     private LoginButton loginButton;
     private CallbackManager callbackManager;
     SharedPreferences preferences;
+    HashMap<String,String> map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +46,12 @@ public class LoginScreen extends AppCompatActivity {
         FacebookSdk.sdkInitialize(getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
         setContentView(R.layout.activity_login_screen);
-        mKinveyClient = new Client.Builder(appKey, appSecret
-                , this.getApplicationContext()).build();
+        mKinveyClient = new Client.Builder(this.getApplicationContext()).build();
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         loginButton=(LoginButton)findViewById(R.id.login_button);
         loginButton.setReadPermissions("user_friends,email");
         setSupportActionBar(toolbar);
+        //fillHashMap();
         mKinveyClient.ping(new KinveyPingCallback() {
             public void onFailure(Throwable t) {
                 Log.e(TAG, "Kinvey Ping Failed", t);
@@ -162,9 +165,78 @@ public class LoginScreen extends AppCompatActivity {
             }
             @Override
             public void onSuccess(User u) {
+                mKinveyClient.push().initialize(getApplication());
                 Log.d(TAG, "successfully logged in with facebook " + u.toString());
             }
         });
+    }
+
+    void fillHashMap()
+    {
+        map=new HashMap<>();
+
+        map.put("AUD", "Australia");
+
+        map.put("BGN", "Bulgarian");
+
+        map.put("BRL","Brazil");
+
+        map.put("CAD","Canada");
+
+        map.put("CHF","Switzerland");
+
+        map.put("CNY","China");
+
+        map.put("CZK","Czech Republic");
+
+        map.put("DKK","Danish");
+
+        map.put("GBP","Britain");
+
+        map.put("HKD","Hongkong");
+
+        map.put("HRK","Crotia");
+
+        map.put("HUF","Hungary");
+
+        map.put("IDR","Indonesia");
+
+        map.put("ILS","Israel");
+
+        map.put("INR","Indian");
+
+        map.put("JPY","Japan");
+
+        map.put("KRW","South korea");
+
+        map.put("MXN","Mexico");
+
+        map.put("MYR","Malaysia");
+
+        map.put("NOK","Norwegian ");
+
+        map.put("NZD","New zealand");
+
+        map.put("PHP","Philippines ");
+
+        map.put("PLN","Polish");
+
+        map.put("RON","Roman");
+
+        map.put("RUB","Russia");
+
+        map.put("SEK","Swedish");
+
+        map.put("SGD","Singapore");
+
+        map.put("THB","Thailand");
+
+        map.put("TRY","Turkey");
+
+        map.put("USD","U.S.A.");
+
+        map.put("ZAR","South African");
+
     }
 }
 

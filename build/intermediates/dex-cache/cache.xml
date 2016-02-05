@@ -2,41 +2,6 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\dell\Documents\GitHub\Travel\app\libs\jackson-core-2.1.3.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="f6c3aed1cdfa21b5c1737c915186ea93a95a58bd">
-        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\jackson-core-2.1.3-0612ea9e1254a167e1c102a3b68be9094096761b.jar" />
-    </item>
-    <item
-        jar="C:\Users\dell\Documents\GitHub\Travel\app\libs\java-api-core-2.10.3.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="2f4107a9c3d2316f6e19e2e6c8b0d3365f593875">
-        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\java-api-core-2.10.3-3bb6157cd167482f63e54e721224ae1dd09e55ae.jar" />
-    </item>
-    <item
-        jar="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
-        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\classes-6c21b156d7e3c6d58cbbb1c25c99329edaa9db49.jar" />
-    </item>
-    <item
-        jar="C:\Users\dell\Documents\GitHub\Travel\app\libs\google-http-client-gson-1.19.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="b3cdefb990d5212bb2a130525b20e2c44aeffc4c">
-        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\google-http-client-gson-1.19.0-48e163c2a2cbc488782123ece82b30bddd42efec.jar" />
-    </item>
-    <item
-        jar="C:\Users\dell\Documents\GitHub\Travel\app\libs\google-http-client-android-1.19.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="e3f11020c2c812112803d252d1392872d3f619c8">
-        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\google-http-client-android-1.19.0-7cc7d20de752688ad1f322a5bb91f5a85db219cf.jar" />
-    </item>
-    <item
         jar="C:\Users\dell\Documents\GitHub\Travel\app\libs\google-http-client-1.19.0.jar"
         jumboMode="false"
         revision="23.0.0"
@@ -44,11 +9,18 @@
         <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\google-http-client-1.19.0-fee8cb1f3333ed561df0b2b8639541a1163888b9.jar" />
     </item>
     <item
-        jar="C:\Users\dell\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jar="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-9a19a106a4fcf86bb601ac3a2075e0c9f8fe00df.jar" />
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-8d4e484038117f3aca5e3daaa65a184c1f8ba139.jar" />
+    </item>
+    <item
+        jar="C:\Users\dell\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-bcce2a45b7e8b3d393446d13a5a0cb3c513cd435.jar" />
     </item>
     <item
         jar="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\exploded-aar\kinvey-android-2.10.3\jars\classes.jar"
@@ -65,6 +37,13 @@
         <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\gson-2.1-62919965bdfe75dfadc95fbf889a5922982c05f3.jar" />
     </item>
     <item
+        jar="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\4.0.30\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="cebe8e4a3a469c4623addcca1dc571407ff3a08e">
+        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\classes-92a841c52acfad90af09d12484a0116a6a7a0fe5.jar" />
+    </item>
+    <item
         jar="C:\Users\dell\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
         jumboMode="false"
         revision="23.0.0"
@@ -72,11 +51,18 @@
         <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.0-cf3362095958fbf92e8f006f28d5e620f5596e15.jar" />
     </item>
     <item
-        jar="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.6.0\jars\classes.jar"
+        jar="C:\Users\dell\Documents\GitHub\Travel\app\libs\google-http-client-android-1.19.0.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
-        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\classes-a4bb9e47b1ecbb6716abd8c61e7c37145bfc3638.jar" />
+        sha1="e3f11020c2c812112803d252d1392872d3f619c8">
+        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\google-http-client-android-1.19.0-7cc7d20de752688ad1f322a5bb91f5a85db219cf.jar" />
+    </item>
+    <item
+        jar="C:\Users\dell\Documents\GitHub\Travel\app\libs\guava-18.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="cce0823396aa693798f8882e64213b1772032b09">
+        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\guava-18.0-cd88dc944f98852ba695f4112609c5fb062654a0.jar" />
     </item>
     <item
         jar="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.2.0\jars\classes.jar"
@@ -93,6 +79,27 @@
         <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\google-http-client-jackson2-1.19.0-f5d244febedc038cc61269d022e283702ab3e8ed.jar" />
     </item>
     <item
+        jar="C:\Users\dell\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.19\a8f23f65fc1e522ee4a1a697ee569901a46741fa\library-1.0.19.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
+        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\library-1.0.19-75e13ed58961610ec995bf180fe0887ae9f31e90.jar" />
+    </item>
+    <item
+        jar="C:\Users\dell\Documents\GitHub\Travel\app\libs\jackson-core-2.1.3.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="f6c3aed1cdfa21b5c1737c915186ea93a95a58bd">
+        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\jackson-core-2.1.3-0612ea9e1254a167e1c102a3b68be9094096761b.jar" />
+    </item>
+    <item
+        jar="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\classes-6c21b156d7e3c6d58cbbb1c25c99329edaa9db49.jar" />
+    </item>
+    <item
         jar="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0"
@@ -100,25 +107,32 @@
         <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\classes-bff6312e378a40498283a5c1b5beec783b6b61ea.jar" />
     </item>
     <item
-        jar="C:\Users\dell\Documents\GitHub\Travel\app\libs\guava-18.0.jar"
+        jar="C:\Users\dell\Documents\GitHub\Travel\app\libs\google-http-client-gson-1.19.0.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="cce0823396aa693798f8882e64213b1772032b09">
-        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\guava-18.0-cd88dc944f98852ba695f4112609c5fb062654a0.jar" />
+        sha1="b3cdefb990d5212bb2a130525b20e2c44aeffc4c">
+        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\google-http-client-gson-1.19.0-48e163c2a2cbc488782123ece82b30bddd42efec.jar" />
     </item>
     <item
-        jar="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jar="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\classes-5b27806b227121cbef7ca2de6495f4cc5e10b76e.jar" />
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\classes-e62c7ce6421bff1b9d0906b0f37fa84954c4ed49.jar" />
     </item>
     <item
-        jar="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jar="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.6.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-b14ba556c841d96c4318178e760f24499bdeddcc.jar" />
+        sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
+        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\classes-a4bb9e47b1ecbb6716abd8c61e7c37145bfc3638.jar" />
+    </item>
+    <item
+        jar="C:\Users\dell\Documents\GitHub\Travel\app\libs\java-api-core-2.10.3.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="2f4107a9c3d2316f6e19e2e6c8b0d3365f593875">
+        <dex dex="C:\Users\dell\Documents\GitHub\Travel\app\build\intermediates\pre-dexed\debug\java-api-core-2.10.3-3bb6157cd167482f63e54e721224ae1dd09e55ae.jar" />
     </item>
 
 </items>
