@@ -25,7 +25,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.google.api.client.json.GenericJson;
+import com.kinvey.android.AsyncAppData;
 import com.kinvey.android.AsyncCustomEndpoints;
+import com.kinvey.android.callback.KinveyListCallback;
+import com.kinvey.java.Query;
 import com.kinvey.java.core.KinveyClientCallback;
 
 import org.json.JSONException;
@@ -51,6 +54,7 @@ public class ContentFragment2 extends Fragment {
     Button calculate;
     String fromCurrency,toCurrency;
     EditText amount;
+    Double enteredAmount;
     public static ContentFragment2 newInstance(int pageIndex) {
         ContentFragment2 contentFragment2 = new ContentFragment2();
         Bundle args = new Bundle();
@@ -70,7 +74,7 @@ public class ContentFragment2 extends Fragment {
         ArrayAdapter<String> LTRadapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
         LTRadapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner.setAdapter(LTRadapter);
-        final Spinner spinner2 = (Spinner)view.findViewById(R.id.spinner2);
+        final Spinner spinner2 = (Spinner) view.findViewById(R.id.spinner2);
         ArrayAdapter<String> LTRadapter2 = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
         LTRadapter2.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner2.setAdapter(LTRadapter2);
@@ -98,6 +102,7 @@ public class ContentFragment2 extends Fragment {
                 }
                 else
                 {
+                    enteredAmount=Double.valueOf( amount.getText().toString());
                     fromCurrency = (String) getKeyFromValue(spinner.getSelectedItem());
                     toCurrency = (String) getKeyFromValue(spinner2.getSelectedItem());
                     Log.d(TAG, fromCurrency + " " + toCurrency);
@@ -123,8 +128,6 @@ public class ContentFragment2 extends Fragment {
 
             protected Map<String, String> getParams() throws com.android.volley.AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
-                //params.put("base", from);
-                //params.put("symbols",to);
                 return params;
             }
         };
@@ -143,11 +146,15 @@ public class ContentFragment2 extends Fragment {
                     JSONObject jsonObject = new JSONObject(response);
                     JSONObject rates=jsonObject.getJSONObject("rates");
                     double rate = (double)rates.get(toCurrency);
+                    double calculatedAmount=rate*enteredAmount;
+                    checkIfMoneyAvailable(toCurrency,calculatedAmount);
                     Log.d(TAG,String.valueOf(rate));
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+
+
             }
         };
     }
@@ -160,6 +167,32 @@ public class ContentFragment2 extends Fragment {
                 Log.d(TAG, error.toString());
             }
         };
+    }
+
+    public void checkIfMoneyAvailable(String currency, Double value)
+    {
+        CurrencyStore currencyStore = new CurrencyStore();
+        Query myQuery = LoginScreen.mKinveyClient.query();
+        myQuery.equals("currency",currency);
+        AsyncAppData<CurrencyStore> myEvents = LoginScreen.mKinveyClient.appData("currencyStore", CurrencyStore.class);
+        myEvents.get(myQuery, new KinveyListCallback<CurrencyStore>() {
+            @Override
+            public void onSuccess(CurrencyStore[] results) {
+                if(results.length==0)
+                {
+
+                }
+                else
+                {
+
+                }
+                Log.v("TAG", "received "+ results.length + " events");
+            }
+            @Override
+            public void onFailure(Throwable error) {
+                Log.e("TAG", "failed to fetchByFilterCriteria", error);
+            }
+        });
     }
 
     void fillHashMap()
