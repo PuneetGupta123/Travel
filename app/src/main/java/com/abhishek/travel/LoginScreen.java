@@ -8,9 +8,10 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.util.MalformedJsonException;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -23,10 +24,8 @@ import com.kinvey.android.Client;
 import com.kinvey.android.callback.KinveyPingCallback;
 import com.kinvey.android.callback.KinveyUserCallback;
 import com.kinvey.java.User;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.HashMap;
 
 public class LoginScreen extends AppCompatActivity {
@@ -37,6 +36,8 @@ public class LoginScreen extends AppCompatActivity {
     Toolbar toolbar;
     private LoginButton loginButton;
     private CallbackManager callbackManager;
+     String  userName=null;
+     String userEmail=null;
     SharedPreferences preferences;
     HashMap<String,String> map;
 
@@ -65,7 +66,8 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 final String accessToken= loginResult.getAccessToken().getToken();
-                Log.d(TAG,accessToken+" success");
+                Log.d(TAG,accessToken+"success");
+
                 loginFacebookKinveyUser(accessToken);
                 GraphRequest request = GraphRequest.newMeRequest(
                         loginResult.getAccessToken(),
@@ -77,9 +79,10 @@ public class LoginScreen extends AppCompatActivity {
                                 Log.d(TAG,object.toString());
                                 Log.d(TAG,response.toString());
                                 try {
-                                    String userName=object.getString("name");
+                                     userName=object.getString("name");
+
                                     String userID=object.getString("id");
-                                    String userEmail=object.getString("email");
+                                     userEmail=object.getString("email");
                                     JSONObject picture = object.getJSONObject("picture");
                                     JSONObject data=picture.getJSONObject("data");
                                     String url=data.getString("url");
@@ -88,7 +91,6 @@ public class LoginScreen extends AppCompatActivity {
                                     editor.putString("UserID",userID);
                                     editor.putString("UserAccessToken",accessToken);
                                     editor.apply();
-
                                     String firstTime = preferences.getString("FirstTime", "");
                                     if(new String("").equals(firstTime))
                                     {
@@ -109,7 +111,10 @@ public class LoginScreen extends AppCompatActivity {
                 parameters.putString("fields", "id,name,link,picture.width(400).height(400),email");
                 request.setParameters(parameters);
                 request.executeAsync();
-                Intent intent = new Intent(LoginScreen.this,MainActivity.class);
+                Intent intent = new Intent(LoginScreen.this,DetailsForm.class);
+                 Toast.makeText(getBaseContext(), userName, Toast.LENGTH_LONG).show();
+                intent.putExtra("name",userName);
+                intent.putExtra("email",userEmail+"");
                 startActivity(intent);
             }
 

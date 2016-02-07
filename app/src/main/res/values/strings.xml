@@ -19,5 +19,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_login_screen">LoginScreen</string>
     <string name="facebook_app_id">1553895308258606</string>
+    <string name="title_activity_details_form">DetailsForm</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

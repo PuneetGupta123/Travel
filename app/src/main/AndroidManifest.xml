@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.abhishek.travel">
+    package="com.abhishek.travel" >
 
-    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="21"/>
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
-    <permission android:name="com.abhishek.travel.permission.C2D_MESSAGE"
+    <permission
+        android:name="com.abhishek.travel.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
+
     <uses-permission android:name="com.abhishek.travel.permission.C2D_MESSAGE" />
+
+    <android:uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -27,32 +39,42 @@
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
-        <meta-data android:name="com.google.android.gms.version" android:value="4030500" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="4030500" />
+
         <activity
             android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name">
-
+            android:label="@string/app_name" >
         </activity>
         <activity
             android:name=".LoginScreen"
             android:label="@string/title_activity_login_screen"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <receiver
-            android:name="com.abhishek.travel.GCMReceiver"
+            android:name=".GCMReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
                 <category android:name="com.abhishek.travel" />
             </intent-filter>
         </receiver>
+
         <service android:name=".GCMService" />
+
+        <activity
+            android:name=".DetailsForm"
+            android:label="@string/title_activity_details_form" >
+        </activity>
     </application>
 
 </manifest>
