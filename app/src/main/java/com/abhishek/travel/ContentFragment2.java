@@ -174,7 +174,7 @@ public class ContentFragment2 extends Fragment {
         CurrencyStore currencyStore = new CurrencyStore();
         Query myQuery = LoginScreen.mKinveyClient.query();
         myQuery.equals("currency",currency);
-        AsyncAppData<CurrencyStore> myEvents = LoginScreen.mKinveyClient.appData("currencyStore", CurrencyStore.class);
+        AsyncAppData<CurrencyStore> myEvents = LoginScreen.mKinveyClient.appData("CurrencyStore", CurrencyStore.class);
         myEvents.get(myQuery, new KinveyListCallback<CurrencyStore>() {
             @Override
             public void onSuccess(CurrencyStore[] results) {

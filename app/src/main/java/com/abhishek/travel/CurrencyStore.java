@@ -9,8 +9,6 @@ import com.kinvey.java.model.KinveyMetaData;
  */
 public class CurrencyStore extends GenericJson {
     @Key("_id")
-    private String id;
-    @Key("_id")
     private String country;
     @Key
     private String currency;
